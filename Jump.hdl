@@ -32,11 +32,11 @@ PARTS:
     Or(a = zr, b = ng, out = temp);
     Not(in = temp, out = pos);
 
-    And(a = j3, b = ng, out = j3);
-    And(a = j2, b = zr, out = j2);
-    And(a = j1, b = pos, out = j1);
+    And(a = j3, b = ng, out = jthree);
+    And(a = j2, b = zr, out = jtwo);
+    And(a = j1, b = pos, out = jone);
 
-    Or(a = j3, b = j2, out = out3);
-    Or(a = j1, b = out3, out = jump);
+    Or(a = jthree, b = jone, out = temp2);
+    Or(a = temp2, b = jtwo, out = jump);
 
 }
