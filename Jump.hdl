@@ -29,14 +29,14 @@ CHIP Jump {
 PARTS:
     // Put your code here:
 
-    Or(a = zr, b = ng, out = temp);
+    Or(a = ng, b = zr, out = temp);
     Not(in = temp, out = pos);
 
     And(a = j3, b = ng, out = jone);
     And(a = j2, b = zr, out = jtwo);
-    And(a = j3, b = pos, out = jthree);
+    And(a = j1, b = pos, out = jthree);
 
-    Or(a = jone, b = jtwo, out = temp2);
-    Or(a = jthree, b = temp2, out = jump);
+    Or(a = jthree, b = jone, out = temp2);
+    Or(a = jtwo, b = temp2, out = jump);
 
 }
