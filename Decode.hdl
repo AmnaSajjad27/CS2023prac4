@@ -25,10 +25,8 @@ CHIP Decode {
         j1,j2,j3;           // Jump wires
 
 PARTS:
-    // Put your code here:
 
-    And(a = in[15], b = true, out = i, out = isel);
-    
+    And(a=in[15], b=true, out=type, out=isel);
     Mux(a=false, b=in[12], sel=isel, out=a);
     Mux(a=false, b=in[11], sel=isel, out=c1);
     Mux(a=false, b=in[10], sel=isel, out=c2);
@@ -42,6 +40,5 @@ PARTS:
     Mux(a=false, b=in[2], sel=isel, out=j1);
     Mux(a=false, b=in[1], sel=isel, out=j2);
     Mux(a=false, b=in[0], sel=isel, out=j3);
-
 
 }
