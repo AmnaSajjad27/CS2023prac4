@@ -34,9 +34,10 @@ PARTS:
 
     And(a = j3, b = ng, out = jone);
     And(a = j2, b = zr, out = jtwo);
+
     And(a = j1, b = pos, out = jthree);
 
-    Or(a = jthree, b = jone, out = temp2);
-    Or(a = jtwo, b = temp2, out = jump);
+    Or(a = jtwo, b = jone, out = temp2);
+    Or(a = jthree, b = temp2, out = jump);
 
 }
